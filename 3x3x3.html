@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Résolution d'un Rubik's Cube 3x3x3 classique</title>
+    <style>
+      body{
+        background-color:rgb(185,185,185);
+        font-size: 20px;
+      }
+      h1{
+        text-align: center;
+        font-size: 30px;
+        color:rgb(229,25,10);
+        text-decoration: underline;
+      }
+      h2{
+        text-align: center;
+        color:rgb(42,105,30);
+      }
+      #p1{
+        text-align: center;
+      }
+      figcaption{
+        font-size: 15px;
+      }
+      #p18{
+        font-size: 30px;
+        color:red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Résoltion d'un cube 3 par 3:</h1>
+    <h2>Les bases</h2>
+    <p id="p1" name="p1">
+      Ici je vais tenter de vous apprendre à finir de a à z un Rubik's Cube 3 par 3 classique car des variantes de ce dernier existe notamment le 3 par 3 mirroir.
+      Je vais donc posé les bases pour réussir avec les formules qui m'ont permis d'apprendre car bien sûr il existe des dizaines et des dizaines de méthode vous pouvez très bien trouvez les votres au fur et à mesure.
+      Comme vous l'aurez remarqué le cube est composé de 6 faces, le blanc fais face au jaune, le vert fait face au bleu, et le rouge fais face au orange.
+      Essayez de retenir l'ordre des couleurs le plus vite possible une technique pour ça, placez la face blanche sur la gauche et donc la jaune sur la droite placez la face rouge en haut et en tournant vous obtenez la phrase:
+      Hervé obéit &rightarrow; RVOB donc rouge vert orange bleu.
+      Une fois que vous connaissez les couleurs places aux pièces</br></br>
+      il y en a de 3 types,</br>
+      Les Centres, situé au centre de chaque faces ils sont immbilent et constitué d'une seule couleur.</br>
+      Les arrêtes, pièces situé a côté des centres elles sont mobiles et constituéde deux couleurs.</br>
+      Les coins, situé aux extrémités de chaque faces ils sont constituéde trois couleurs.</br>
+    </p>
+    <p id="p2" name="p2">
+      A partir de maintenant je ne dirais plus face avant,haute,droite,gauche,arrière ou basse. Je vais utiliser la notation Française, un lien vers la notation anglaise (internationale) est disponible <a href="./traduction.html" target="_blank">ici</a>.</br>
+      Donc la face avant sera A</br>
+      La face haute H</br>
+      La face droite D</br>
+      La face gauche G</br>
+      La face arrière P</br>
+      La face basse B</br>
+    </p>
+    <h2>La première étape: La croix blanche</h2>
+    <p id="p3" name="p3">
+      A partir de maintenant le cube est mélangé, placez votre cube pour que le centre blanc et donc la face blanche soit en haut.</br>
+      Maintenant vous allez devoir placer les arrêtes contenant un côté blanc sur la face blanche de sorte à ce que le morceau blanc soit bord à bord avec le centre blanc.
+      Attention vous devez également placé le deuxième côté avec le centre de la couleur correspondante, par exemple l'arrête bleu et blanc doit être entre le centre bleu et blanc dans ce cas on dit qu'elle est bien orientée mais mal placée.
+      Vous devez donc évitez ceci:</br>
+      <figure>
+        <img src="./image/arrete_mal_oriente.jpg" width="200px" height="200px" />
+        <figcaption>arrête bien placée mais mal orientée</figcaption>
+        <img src="./image/arrete_mal_place.jpg" width="200px" height="200px"/>
+        <figcaption>arrête bien orientée mais mal placée</figcaption>
+      </figure>
+      Je tient à préciser que si je ne vous donnes pas de formule c'est tout simplement qu'il n'y en a pas "d'officelle", vous pouvez résoudre cette partie seuls sans soucis.
+      vous devez à la fin de cette étape avoir donc une croix blanche correcte comme ci dessous.</br>
+      <img src="./image/croix_finie1.jpg" width="200px" height="200px"/> <img src="./image/croix_finie2.jpg" width="200px" height="200px"/>
+    </p>
+    <h2>La deuxième étape: Les coins blanc et la première couronne</h2>
+    <p id="p4" name="p4">
+      A partir de maintenant ça se corse un petit peu, on va commencer les formules donc pour finir cette étape votre cube doit ressembler à ça:</br>
+      <img src="./image/couronne_finie2.jpg" width="200px" height="200px"/>
+      <img src="./image/couronne_finie1.jpg" width="200px" height="200px"/></br>
+      Donc pour ce faire vous aller devoir apprendre et retenir une dernière chose avant les formules il s'agit des mouvements.
+      pour cela je vous invite à vous rendre <a href="./traduction.html" target="_blank">ici</a> pour voir la liste des mouvements français et anglais.
+    </p>
+    <p id="p5" name="p5">
+      Pour placer vos coins vous allez devoir identifer un coin avec un côté blanc, placez le sous sa position finale comme ici:</br>
+      <img src="./image/coin_mal_place1.jpg" width="200px" height="200px"/>
+      <img src="./image/coin_mal_place2.jpg" width="200px" height="200px"/>
+      <img src="./image/coin_mal_place3.jpg" width="200px" height="200px"/>
+    </p>
+    <p id="p6" name="p6">
+      Vous devez donc utilisé la formule D' B' D B, jusqu'à ce que le coin soit correctement positionné cela peut nécessiter la répétition de la formule.
+    </p>
+    <img src="./image/coin_ok.jpg" width="200px" height="200px"/>
+    <h2>La troisième étape: La seconde couronne</h2>
+    <p id="p7" name="p7">
+      A partir de maintenant et jusqu'à la fin de la résolution vous devez tenir votre cube avec la face blanche (terminé) en dessous et donc au dessus la face jaune.
+      Pour cette étape il y a deux formules que je vous donne un peu plus loin je dois vous expliquer comment différencier les deux cas possible pour finir cette étape et donc savoir quelle formule appliqué.
+      Nous allons nous concentré sur les arrêtes ne contenant pas de jaune sur leurs faces, une fois qu'une arrête a était identifier placer la face à vous et tourner le cube jusqu'à ce que la couleur face à vous de l'arrête coïncide avec le centre de la face avant.
+      Ensuite voilà les deux cas différents:
+    </p>
+    <ul>
+      <li>soit l'arrête doit tourner vers la face de gauche.Cas 1</li>
+      <li>soit l'arrête doit tourner vers la face de droite.Cas 2</li>
+    </ul>
+    <ul>
+      <li>Cas 1:H' G' H G H A H' A'</li>
+      <li>Cas 2:H D H' D' H' A' H A</li>
+    </ul>
+    <p id="p8" name="p8">
+      Si vous avez une arrête qui est mal placé ou mal orientée comme ici:
+    </p>
+    <figure>
+      <img src="./image/arrete2_mal_place.jpg" width="200px" height="200px"/>
+      <figcaption>arrête mal placée</figcaption>
+      <img src="./image/arrete2_mal_oriente.jpg" width="200px" height="200px"/>
+      <figcaption>arrête mal orientée</figcaption>
+    </figure>
+    <p id="p9" name="p9">
+      Si votre cube ressemble à celui ci vous pouvez passer à l'étape suivante.
+    </p>
+    <img src="./image/couronne2_finie1.jpg" width="200px" height="200px"/>
+    <img src="./image/couronne2_finie2.jpg" width="200px" height="200px"/>
+    <h2>La quatrimème étape: La face jaune</h2>
+    <p id="p10" name="p10">
+      Première étape pour finir la face jaune, vous devez tout d'abbord avoir la "croix jaune" contrairement à la "croix blanche" la croix jaune possède des formules et le placement des arrêtes n'importe pas pour le moment.
+      pour le moment vous avez trois cas possible: (on ne s'occupera pas des coins pour le moment)
+    </p>
+    <table border="5px" id="tab1" name="tab1">
+      <caption align="top">Cas 1</caption>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>case jaune</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>peu importe</td><td>peu importe</td><td>peu importe</td>
+      </tr>
+    </table>
+    <table border="5px" name="tab2" id="tab2">
+      <caption align="top">Cas 2</caption>
+      <tr>
+        <td>peu importe</td><td>peu importe</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>case jaune</td><td>case jaune</td><td>case jaune</td>
+      </tr>
+      <tr>
+        <td>peu importe</td><td>peu importe</td><td>peu importe</td>
+      </tr>
+    </table>
+    <table border="5px" id="tab3" name="tab3">
+      <caption align="top">Cas 3</caption>
+      <tr>
+        <td>peu importe</td><td>peu importe</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>peu importe</td><td>peu importe</td><td>peu importe</td>
+      </tr>
+    </table>
+    <ul>
+      <li>Cas 1: Une "virgule" est sur la face jaune dans ce cas faite: A H D H' D' A'</li>
+      <li>Cas 2: Une "barre" est sur la face jaune dans ce cas faite: A D H D' H' A'</li>
+      <li>Cas 3: seul le centre est présent sur la face jaune dans ce cas faite une des deux formules précédentes et ensuite regardé comment votre cube a évolué.</li>
+    </ul>
+    <p id="p11" name="p11">
+      A partir d'ici Vous avez une croix jaune, on va s'occuper de mettre les coins jaunes sur la face jaune.
+      encore une fois plusieurs cas son possible mais il n'y a qu'une seule formule c'est la prise en main du cube va changer: D H D' H D H2 D'.</br>
+      Dans le cas 1, un coin est bien placé sur la fa ce jaune prenné le comme ci dessous:
+    </p>
+    <table border="5px">
+      <caption align="top">Cas 1: un coin placé sur la face jaune</caption>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>case jaune</td><td>case jaune</td><td>case jaune</td>
+      </tr>
+      <tr>
+        <td>case jaune</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+    </table>
+    <p id="p12" name="p12">
+      dans le cas 2, deux coins sont bien placés on va orienter le cube de manière à avoir un coin jaune mal orienté sur la face avant(en haut à droite).
+    </p>
+    <table border="5px">
+      <caption align="top">Cas 2: deux coins bien placés</caption>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>case jaune</td><td>case jaune</td><td>case jaune</td>
+      </tr>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+    </table>
+    <p id="p13" name="p13">
+      dans le cas 3, aucun coin n'est bien orienté sur la face jaune on va tenir le cube pour avoir un coin mal orienté sur la zone en haut à droite de la face gauche.
+    </p>
+    <table border="5px">
+      <caption align="top">Cas 3: aucun coin bien placé</caption>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+      <tr>
+        <td>case jaune</td><td>case jaune</td><td>case jaune</td>
+      </tr>
+      <tr>
+        <td>peu importe</td><td>case jaune</td><td>peu importe</td>
+      </tr>
+    </table>
+    <p id="p14" name="p14">
+      Orienté votre cube comme il le faut, faite la forumule,ré-orienté votre cube puis recommencez.La formule peut être applicable jusqu'à trois fois.
+      Si votre cube ressemble à celui ci vous pouvez passer à l'avant dernière étape.
+    </p>
+      <img src="./image/face_jaune_finie1.jpg" width="200px" height="200px"/>
+      <img src="./image/face_jaune_finie2.jpg" width="200px" height="200px"/>
+    <h2>La cinquième étape: Les coins jaunes</h2>
+    <p id="p15" name="p15">
+      Dans cette étape vous allez placer à leurs places les coins contenant un côté jaune, si sur votre cube les coins sont déjà placés et orienté vous pouvez passer à l'étape suivante.
+      si ce n'est pas le cas vous allez devoir appliquécette formule: D' A D' P2 D A' D' P2 D2.
+      Pour cette formule vous avez deux cas possible:
+    </p>
+    <ul>
+      <li>Cas 1: deux coins sont placé de manière à avoir une couleur en commun sur une face, dans ce cas placé les deux coins à l'arrière du cube et faite la formule.</li>
+      <li>Cas 2: aucune paire de coins ne donne une seule couleur sur une des faces donc utilisez la formule pour échanger la place de deux coins et ensuite vous obtiendrez le cas 1.</li>
+    </ul>
+    <p id="p16" name="p16">
+      Si vote cube ressemble à celui la, passez à la dernière étape. Courage vous y êtes presque.
+    </p>
+    <img src="./image/coins_jaune_finie1.jpg" width="200px" height="200px"/>
+    <img src="./image/coins_jaune_finie2.jpg" width="200px" height="200px"/>
+    <h2>Dernière étape: placement des arrêtes jaunes</h2>
+    <p id="p17" name="p17">
+      Dans cette dernière étape nous allons placer les arrêtes il y a deux formules très similaires à retennir, mais plusieurs cas possibles.
+    </p>
+    <ul>
+      <li>Cas 1: une face est entièrement terminé (en plus de la jaune et blanche) placez cette face à l'arrière du cube et choississez votre cas de figure.</li>
+      <ul>
+        <li>Cas A: les trois dernières arrêtes doivent tourner dans le sens des aiguilles d'une montre (l'arrête sur la face gauhe doit aller sur la droite,celle de droite vient devant et celle de devant va à gauche).Dans ce cas faite: A2 H D' G A2 D G' H A2</li>
+        <li>Cas B: les trois dernières arrêtes doivent tourner en sens inverse des aiguilles d'une montre (l'arrête de gauche vient devant, celle de devant va à droite et celle de droite va à gauche).Dans ce cas faite: A2 H' D' G A2 D G' H' A2</li>
+      </ul>
+      <li>Cas 2: Aucune face n'est finie dans ce cas faite au hasard l'une des deux formules précédente, replacez votre cube qui a maintenant une face finie et choississez la formule à appliqué.</li>
+      <li>Cas 3: votre cube est fini</li>
+    </ul>
+    <p id="p18" name="p18">
+      Félicitations vous avez terminé votre cube !
+    </p>
+  </body>
+</html>
